@@ -26,6 +26,7 @@ The Exit option exits the application.
 
 Dependencies
 This application uses the following dependencies:
-
+pip install colorama
+pip install numpy
 SQLite3 (included with Python)
 colorama (for colored console output)
