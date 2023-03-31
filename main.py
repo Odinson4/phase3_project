@@ -187,30 +187,31 @@ while True:
         magenta = Fore.MAGENTA
         cyan = Fore.CYAN
         grey = Fore.LIGHTWHITE_EX
+        white = Fore.WHITE
 
         available_pokemon = [
             Battle(f"{magenta}Mewtwo{Style.RESET_ALL}", f"{magenta}Psychic{Style.RESET_ALL}", [f"{magenta}Confusion{Style.RESET_ALL}", f"{magenta}Psybeam{Style.RESET_ALL}",
-                                                                                               f"{magenta}Ice Beam{Style.RESET_ALL}", f"{cyan}Mega Punch{Style.RESET_ALL}"], {'ATTACK': 15, 'DEFENSE': 50}),
+                                                                                               f"{magenta}Ice Beam{Style.RESET_ALL}", f"{white}Mega Punch{Style.RESET_ALL}"], {'ATTACK': 15, 'DEFENSE': 50}),
 
             Battle(f"{yellow}Pikachu{Style.RESET_ALL}", f"{yellow}Electric{Style.RESET_ALL}", [f"{yellow}Thunderbolt{Style.RESET_ALL}", f"{yellow}Thunder Shock{Style.RESET_ALL}",
-                                                                                               f"{cyan}Iron Tail{Style.RESET_ALL}", f"{cyan}Quick Attack{Style.RESET_ALL}"], {'ATTACK': 5, 'DEFENSE': 3}),
+                                                                                               f"{white}Iron Tail{Style.RESET_ALL}", f"{white}Quick Attack{Style.RESET_ALL}"], {'ATTACK': 5, 'DEFENSE': 3}),
 
-            Battle(f"{cyan}Snorlax{Style.RESET_ALL}", 'Normal', [f"{cyan}Body Slam{Style.RESET_ALL}", f"{cyan}Rest{Style.RESET_ALL}",
-                                                                 f"{cyan}Hyper Beam{Style.RESET_ALL}", f"{cyan}Yawn{Style.RESET_ALL}"], {'ATTACK': 7, 'DEFENSE': 12}),
+            Battle(f"{white}Snorlax{Style.RESET_ALL}", 'Normal', [f"{white}Body Slam{Style.RESET_ALL}", f"{white}Rest{Style.RESET_ALL}",
+                                                                  f"{white}Hyper Beam{Style.RESET_ALL}", f"{white}Yawn{Style.RESET_ALL}"], {'ATTACK': 7, 'DEFENSE': 12}),
 
-            Battle(f"{cyan}Jigglypuff{Style.RESET_ALL}", 'Normal', [
-                f"{cyan}Sing{Style.RESET_ALL}", f"{cyan}Body Slam{Style.RESET_ALL}", f"{cyan}Rest{Style.RESET_ALL}", f"{cyan}Rollout{Style.RESET_ALL}"], {'ATTACK': 2, 'DEFENSE': 2}),
+            Battle(f"{white}Jigglypuff{Style.RESET_ALL}", 'Normal', [
+                f"{white}Sing{Style.RESET_ALL}", f"{white}Body Slam{Style.RESET_ALL}", f"{white}Rest{Style.RESET_ALL}", f"{white}Rollout{Style.RESET_ALL}"], {'ATTACK': 2, 'DEFENSE': 2}),
 
             Battle(f"{blue}Gyarados{Style.RESET_ALL}", 'Water', [f"{blue}Waterfall{Style.RESET_ALL}", f"{blue}Dragon Rage{Style.RESET_ALL}",
-                                                                 f"{cyan}Bite{Style.RESET_ALL}", f"{cyan}Hyper Beam{Style.RESET_ALL}"], {'ATTACK': 12, 'DEFENSE': 8}),
+                                                                 f"{white}Bite{Style.RESET_ALL}", f"{white}Hyper Beam{Style.RESET_ALL}"], {'ATTACK': 12, 'DEFENSE': 8}),
 
-            Battle(f"{cyan}Onix{Style.RESET_ALL}", 'Ground', [f"{cyan}Rock Throw{Style.RESET_ALL}", f"{cyan}Dig{Style.RESET_ALL}",
-                                                              f"{cyan}Iron Tail{Style.RESET_ALL}", f"{cyan}Bind{Style.RESET_ALL}"], {'ATTACK': 6, 'DEFENSE': 14}),
+            Battle(f"{white}Onix{Style.RESET_ALL}", 'Ground', [f"{white}Rock Throw{Style.RESET_ALL}", f"{white}Dig{Style.RESET_ALL}",
+                                                               f"{white}Iron Tail{Style.RESET_ALL}", f"{white}Bind{Style.RESET_ALL}"], {'ATTACK': 6, 'DEFENSE': 14}),
 
-            Battle(f"{cyan}Machamp{Style.RESET_ALL}", 'Fighting', [f"{cyan}Karate Chop{Style.RESET_ALL}", f"{cyan}Cross Chop{Style.RESET_ALL}",
-                                                                   f"{cyan}Submission{Style.RESET_ALL}", f"{cyan}Seismic Toss{Style.RESET_ALL}"], {'ATTACK': 16, 'DEFENSE': 8}),
+            Battle(f"{white}Machamp{Style.RESET_ALL}", 'Fighting', [f"{white}Karate Chop{Style.RESET_ALL}", f"{white}Cross Chop{Style.RESET_ALL}",
+                                                                    f"{white}Submission{Style.RESET_ALL}", f"{white}Seismic Toss{Style.RESET_ALL}"], {'ATTACK': 16, 'DEFENSE': 8}),
 
-            Battle(f"{red}Charizard{Style.RESET_ALL}", 'Fire', [f"{red}Flamethrower{Style.RESET_ALL}", f"{cyan}Fly{Style.RESET_ALL}",
+            Battle(f"{red}Charizard{Style.RESET_ALL}", 'Fire', [f"{red}Flamethrower{Style.RESET_ALL}", f"{white}Fly{Style.RESET_ALL}",
                                                                 f"{red}Blast Burn{Style.RESET_ALL}", f"{red}Fire Punch{Style.RESET_ALL}"], {'ATTACK': 12, 'DEFENSE': 8}),
 
             Battle(f"{blue}Blastoise{Style.RESET_ALL}", 'Water', [f"{blue}Water Gun{Style.RESET_ALL}", f"{blue}Bubblebeam{Style.RESET_ALL}",
@@ -236,18 +237,7 @@ while True:
         opponent_pokemon = available_pokemon[opponent_pokemon_index]
 
         # Start the battle
-#         print('''
 
-
-# ██████╗░░█████╗░████████╗████████╗██╗░░░░░███████╗
-# ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║░░░░░██╔════╝
-# ██████╦╝███████║░░░██║░░░░░░██║░░░██║░░░░░█████╗░░
-# ██╔══██╗██╔══██║░░░██║░░░░░░██║░░░██║░░░░░██╔══╝░░
-# ██████╦╝██║░░██║░░░██║░░░░░░██║░░░███████╗███████╗
-# ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚══════╝
-
-
-#         ''')
         player_pokemon.fight(opponent_pokemon)
 
     elif choice == '6':
@@ -264,7 +254,6 @@ while True:
 ███╗░░██╗███████╗██████╗░██████╗░░░░░░░
 ████╗░██║██╔════╝██╔══██╗██╔══██╗░░░░░░
 ██╔██╗██║█████╗░░██████╔╝██║░░██║░░░░░░
-
 ██║╚████║██╔══╝░░██╔══██╗██║░░██║░░░░░░
 ██║░╚███║███████╗██║░░██║██████╔╝██╗██╗
 ╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝╚═╝
